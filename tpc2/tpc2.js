@@ -12,10 +12,11 @@ function inspect(obj) {
     for (const key in obj) {
         if (obj.hasOwnProperty(key)) {                       
             if(typeof(obj[key]) == 'function') {
-                console.log(key + ': ' + obj[key]())
+                obj[key]()
             } else { 
-                console.log(key + ': ' + obj[key])
+                console.log(key + ' = ' + obj[key])
             }
+            
         }
     }
 }
